@@ -28,7 +28,7 @@
     "appId": "org.example.sqlcipherbetter",
     "productName": "SQLCipherBetter",
     "asar": true,
-    "publish": "never",
+    "publish": [],
     "files": [
       "**/*"
     ],
