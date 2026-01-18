@@ -1,0 +1,41 @@
+{
+  "name": "electron-sqlcipher-better",
+  "version": "1.0.0",
+  "description": "Cross-platform Electron app with encrypted SQLCipher DB",
+  "author": {
+    "name": "Sohan",
+    "email": "cryptamail@gmail.com"
+  },
+  "homepage": "https://example.com/yourapp",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "rebuild": "npx electron-rebuild -f -w better-sqlite3-multiple-ciphers",
+    "postinstall": "electron-builder install-app-deps",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "better-sqlite3-multiple-ciphers": "*",
+    "keytar": "^7.9.0"
+  },
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.13.3",
+    "electron-rebuild": "^3.2.9"
+  },
+  "build": {
+    "appId": "org.example.sqlcipherbetter",
+    "productName": "SQLCipherBetter",
+    "asar": true,
+    "files": [
+      "**/*"
+    ],
+    "linux": {
+      "target": ["deb", "AppImage"]
+    },
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
